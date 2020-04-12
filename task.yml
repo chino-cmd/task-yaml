@@ -1,0 +1,15 @@
+--- 
+- 
+  hosts: localhost
+  name: http_installaton
+  tasks: 
+    - 
+      name: "install httpd service"
+      yum: 
+        name: httpd
+        state: present
+    - 
+      name: "start web server"
+      service: 
+        name: httpd
+        state: started
